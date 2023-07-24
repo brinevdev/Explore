@@ -10,7 +10,6 @@ body {
 .wrapper {
 	display: flex;
 	flex-direction: column;
-    overflow: hidden;
 	min-height: 100%;
     position: relative;
 }
@@ -78,8 +77,7 @@ body {
         transition: 0.8s  ease;
     }
     opacity: 0;
-  
-    transition: background 300ms ;
+    transition: 300ms ;
     position: sticky;
     width: 100%;
     top: 0;
@@ -136,6 +134,7 @@ body {
             font-weight: 700;
             text-transform: uppercase;
             color: inherit;
+            transition: all 0.3s;
             &:hover {
                 text-decoration: underline;
             }
@@ -312,7 +311,7 @@ body {
     &__button {
         &._active {
             opacity: 1;
-            transition: opacity 0.8s ease 1.3s;
+            transition: opacity 0.8s ease 1.3s, background-color 0.3s,color 0.3s;
         }
         opacity: 0;
         padding: 26px 64px;
@@ -435,7 +434,7 @@ body {
 .walkways {
     padding: 100px 0px 100px;
     position: relative;
-   
+    overflow: hidden;
     background: rgb(1, 10, 32);
     &__container {
         position: relative;
@@ -491,7 +490,7 @@ body {
         opacity: 0;
         &._active {
             opacity: 1;
-            transition: opacity 0.8s ease 1.3s;
+            transition: opacity 0.8s ease 1.3s, background-color 0.3s, color 0.3s;
         }
     }
     &__background{
@@ -533,6 +532,7 @@ body {
 .beach {
     padding: 100px 0px 100px;
     position: relative;
+    overflow: hidden;
     background: rgb(1, 10, 32);
     &__container {
         position: relative;
@@ -590,7 +590,7 @@ body {
         &._active {
             transform: scale(1);
             opacity: 1;
-            transition: opacity 2s ease 1s;
+            transition: opacity 2s ease 1s, background-color 0.3s,color 0.3s;
         }
     }
     &__background{
@@ -902,16 +902,11 @@ body {
         &._active {
             transform: scale(1);
             opacity: 1;
-            transition: opacity 0.8s ease 1.4s;
+            transition: opacity 0.8s ease 1.4s,background-color 0.3s,color 0.3s;
         }
     }
 }
-.title {
-}
-.text {
-}
-.button {
-}
+
 
 @media (max-width: 1400px){
     .learn-more {
@@ -1234,7 +1229,7 @@ body {
         &._active {
             transform: scale(1);
             opacity: 1;
-            transition: opacity 1.2s ease 0.6s;
+            transition: opacity 1.2s ease 0.6s, background-color 0.3s,color 0.3s;
         }
         margin-left: 4px;     
         align-self: start;
@@ -1328,10 +1323,7 @@ body {
         max-width: 860px;
     }
 }
-.text {
-}
-.button {
-}
+
 @media(max-width:992px) {
     .getting-there {
         padding: 80px 0px 100px;
