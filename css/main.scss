@@ -35,6 +35,7 @@ body {
 ._transparent-background {
     background: rgba(0,0,0,0.6);
 }
+
 .button {
     padding: 16px 40px;
     display: inline-flex;
@@ -794,15 +795,12 @@ body {
 .text {
 }
 .body-numbers {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -30px;
+ 
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
     gap: 20px;
-    justify-content: space-between;
-    &__column {
-        padding:0 30px;
-        flex: 0 1 370px;
-    }
+  
+
 
     &__item {
     }
@@ -962,6 +960,7 @@ body {
     &__video {
         position: relative;
         padding: 0 0 57% 0;
+        max-width: 100%;
         &:not(:last-child) {margin-bottom: 126px;}
         iframe{
             position: absolute;
@@ -976,6 +975,7 @@ body {
     &__items {
         transform: translateY(30%);
         opacity: 0;
+        max-width: 100%;
         &._active {
             transform: translateY(0);
             opacity: 1;

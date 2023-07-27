@@ -732,15 +732,9 @@ body {
 }
 
 .body-numbers {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 20px;
-  justify-content: space-between;
-}
-.body-numbers__column {
-  padding: 0 30px;
-  flex: 0 1 370px;
 }
 .body-numbers__number {
   color: #DD2242;
@@ -892,6 +886,7 @@ body {
 .life__video {
   position: relative;
   padding: 0 0 57% 0;
+  max-width: 100%;
 }
 .life__video:not(:last-child) {
   margin-bottom: 126px;
@@ -908,6 +903,7 @@ body {
 .life__items {
   transform: translateY(30%);
   opacity: 0;
+  max-width: 100%;
 }
 .life__items._active {
   transform: translateY(0);
