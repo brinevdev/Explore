@@ -623,6 +623,7 @@ body {
 }
 .swiper-slide img {
   width: 100%;
+  border-radius: 12px;
 }
 
 .swiper-pagination-horizontal {
